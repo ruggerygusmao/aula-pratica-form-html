@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 02</title>
+
+    <style>
+        fieldset{
+            width: 29%;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/action.php" method="POST">
+
+        <fieldset>
+            <p>Dados pessoais</p>
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nomeA" id="nome">
+            <br><br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" name="idad" id="idade">
+            <br><br>
+
+            <p>Dados profissionais</p>
+
+            <label for="escolaridade">Escolaridade:</label>
+            <select name="formacao" id="escolaridade">
+                <option value="em">Ensino Médio</option>
+                <option value="ef">Ensino Fundamental</option>
+                <option value="es">Ensino Superio</option>
+            </select>
+            <br><br>
+
+            Área de atuação
+            <input type="radio" name="gere" id="gerencia" checked>
+            <label for="gerencia">Gerência</label>
+
+            <input type="radio" name="fina" id="financeiro">
+            <label for="financeiro">Financeiro</label>
+
+            <input type="radio" name="rece" id="recepcao">
+            <label for="recepcao">Recepção</label>
+
+        </fieldset>
+    
+    </form>
+    
+</body>
+</html>

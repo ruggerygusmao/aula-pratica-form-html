@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+
+    <style>
+    
+        body{
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: beige;
+            background-image: linear-gradient(to right, #3E2C41, #5C527F);   
+        }
+        #form{
+            display: flex;
+            justify-content: center;
+        }
+        fieldset{
+            width: 20%;
+            background-color: #3a3b3c;
+            border-style: none;
+            border-radius: 6px;
+        
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            border-radius: 6px;
+            display:grid; 
+            background-color: #636669; 
+            color: #FFF;
+            border: none;
+            height: 30px; 
+        }
+        a{
+            text-decoration: none;
+            color: #4fb1ff;
+        }
+        .btn{
+            background-color: #1877f2;
+            border-radius: 6px;
+            color: #FFFFFF;
+            border: none;
+            height: 30px;
+            cursor: pointer;
+            display: inline-table;
+        }
+
+        .btn:hover{
+            background-color: #1c1e21;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="/action.php" method="POST">
+        <fieldset>
+            <h2>Tela de Login</h2>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="user" id="usuario">
+            <br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="psw" id="senha">
+            <br>
+            <a href="#" target="_blank">Esqueceu a senha? Clique aqui</a>
+            <br><br>
+
+            <input class="btn" type="submit" value="Fazer login">
+            <input class="btn" type="button" value="Cadastrar">
+        </fieldset> 
+    </form>
+
+
+</body>
+</html>
