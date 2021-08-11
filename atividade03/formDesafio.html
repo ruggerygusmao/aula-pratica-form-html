@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Formulário</title>
+
+    <style>
+        body{
+            font-family: monospace;
+        }
+        span{
+            color: #ee7930;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 11,5px;
+        }
+        #tb01{
+            display: flex;
+            justify-content: center;
+        }
+        .col01{
+            background-color: #e3ebee;
+            width: 200px;
+            height: 25px;
+            text-align: left;
+        }
+        .col02{
+            background-color: #f7f7f7;
+            width: 550px;
+        }
+        .title-table{
+            background-color: #e3ebee;
+            text-align: left;
+        }
+        #table02{
+            background-color: #f7f7f7;
+        }
+        .col02-tb02{
+            width: 75px;
+        }
+        .row04-tb02{
+            width: 550px;
+        }
+        .col04-tb02{
+            width: 150px;
+        }
+        #nome{
+            width: 500px;
+        }
+        #btn-salvar{
+            text-align: start; 
+        }
+
+        .btn{
+            background-color: #d3d0c9;
+            border-top-color: #FFFFFF;
+            border-left-color: #FFFFFF;
+            border-right-color: #e6e2e2;
+            border-bottom-color:#e6e2e2;
+        }
+        .btn-end{
+            width: 100px;
+        }
+    </style>
+
+    
+</head>
+<body>  
+
+    <p class="title">
+       <span>&gt;</span> Manutençao do Orgão Colegiado
+    </p>
+
+    <table id="tb01">
+        <tr>
+            <th class="col01">Unidade</th>
+            <td class="col02">FACULDADE ENGENHARIA DE ILHA SOLTEIRA</td>
+        </tr> 
+        
+        <tr>
+            <th class="col01">Tipo de Colegiado</th>
+            <td class="col02">CONGREGAÇÃO</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <form action="/action.php" method="POST">
+
+        <table id="table02">
+            <thead>
+                <tr>
+                    <th class="title-table" colspan="4"> Órgão Colegiado</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td class="title">Nome</td>
+                    <td colspan="4">
+                            <input type="text" name="nom" id="nome" 
+                            value="CONGREGAÇÃO DA FACULDADE DE ILHA SOLTEIRA">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="title">Sigla</td>
+                    <td class="col04-tb02">
+                        <input class="col02-tb02" type="text" name="sg" id="sigla" value="CFIS">
+                    </td>
+                    <td class="title">Status</td>
+                    <td class="col04-tb02">
+                        <select name="st" id="status">
+                            <option value="ativo">ATIVO</option>
+                            <option value="noAtivo">NÃO ATIVO</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="title">Data Ativação</td>
+                    <td>
+                        <input class="col02-tb02" type="text" name="dataAtv" id="data" value="15/10/2000">
+                    </td>
+                    <td class="title">Data<br>Desativação</td>
+                    <td>
+                        <input class="col02-tb02" type="text" name="data" id="dataDesativ">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="title">Órgão de Origem</td>
+                    <td colspan="4">
+                        <input class="row04-tb02" type="text" name="orgao" id="orgaoOrigem">
+                        <input class="btn" type="button" value="Buscar">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="title">Órgão Superior</td>
+                    <td colspan="4">
+                        <input class="row04-tb02" type="text" name="orgaoS" id="orgaoSuperior">
+                        <input class="btn" type="button" value="Buscar">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="title">Documentação</td>
+                    <td colspan="">
+                        <textarea name="desc" id="documentacao" cols="60" rows="5">Órgão criado com o objetivo de aprovar normas da unidade.
+                        </textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="btn-salvar" colspan="1"> 
+                        <input class="btn btn-end" type="submit" value="Salvar">
+                    </td>
+                    <td>
+                        <input class="btn btn-end" type="reset" value="Excluir">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>    
+</body>
+</html>
